@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "566f367c-6217-4420-ac34-ef7d3069815b",
+		"name": "Fruits and Vegies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33129527"
+	},
+	"item": [
+		{
+			"name": "Add Fruit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Orange\",\n    \"quantity\": 10000,\n    \"type\": \"fruit\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/items/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"items",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vegie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Tomatoes\",\n    \"quantity\": 2000,\n    \"type\": \"vegetable\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/items/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"items",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/items/list?type=vegetable&unit=kilogram",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"items",
+						"list"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "vegetable"
+						},
+						{
+							"key": "unit",
+							"value": "kilogram"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/items/search?type=vegetable&name=Toma",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"items",
+						"search"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "vegetable"
+						},
+						{
+							"key": "name",
+							"value": "Toma"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
