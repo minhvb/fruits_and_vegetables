@@ -6,7 +6,6 @@ use App\Entity\Item;
 use App\Transformer\GramTransformer;
 use App\Transformer\KilogramTransformer;
 use App\Transformer\TransformerAdapter;
-use App\Util\UnitConversion;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
