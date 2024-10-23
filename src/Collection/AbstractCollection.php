@@ -78,16 +78,6 @@ abstract class AbstractCollection implements CollectionInterface
         };
     }
 
-    private function transform(array $items): array
-    {
-        return array_map(function ($fruit) {
-            return [
-                'name' => $fruit->getName(),
-                'quantity' => UnitConversion::gramToKilogram($fruit->getQuantity())
-            ];
-        }, $items);
-    }
-
     public abstract function getEntityClass(): string;
     public abstract function add(array $data): Item;
 }
